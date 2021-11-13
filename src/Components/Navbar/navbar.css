@@ -1,7 +1,7 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    background: rgba(151, 171, 177, 0.8);
+    background: rgba(114, 132, 168, 0.8);
     padding: 10px 60px;
     color: white;
   }

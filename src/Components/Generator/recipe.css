@@ -1,0 +1,51 @@
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 50px;
+    background-color: rgba(114, 132, 168, 1);
+    box-shadow: 3px 8px 13px 2px rgba(27, 27, 58, 0.6);
+    border-radius: 25px;
+    width: 500px;
+    height: 400px;
+    color: white;
+}
+
+.close {
+    color: white;
+    font-size: 70px;
+    position: absolute;
+    right: 30px;
+    top: 0;
+}
+
+.recipe {
+    color: white;
+    margin: 20px;
+    width: 400px;
+    border-radius: 15px;
+    background-color: rgba(114, 132, 168, 0.8);
+    box-shadow: 3px 8px 13px 2px rgba(27, 27, 58, 0.6);
+}
+
+.recipe-pic {
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.recipe-pic-popup {
+    border-radius: 10px;
+}
+
+
+/* .overlay {
+    position: absolute;
+    background-color: blue;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    filter: blur(2px);  
+} */
