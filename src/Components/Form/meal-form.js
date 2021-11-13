@@ -6,7 +6,9 @@ function MealForm() {
         event.preventDefault();
         setSubmitting(true);
 
-        setTimeout()
+        setTimeout(() => {
+            setSubmitting(false);
+        }, 3000)
         alert('You have successfully submitted the form!');
 
     }
@@ -14,6 +16,9 @@ function MealForm() {
     return (
         <div className="wrapper">
             <h1>Meal Preferences</h1>
+            {submitting &&
+                <div>Submitting form...</div>
+            }
             <form onSubmit={handleSubmit}>
                 <fieldset>
                     <label>
