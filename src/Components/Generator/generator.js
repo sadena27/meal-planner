@@ -5,7 +5,6 @@ import MealForm from '../Form/meal-form'
 function Generator() {
     return (
         <div>
-            This is the meal plan generator.
             <MealForm/>
         </div>
     )
