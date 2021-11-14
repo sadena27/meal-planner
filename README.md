@@ -4,7 +4,7 @@
 ![Home Page](./images/Homepage.png?)
 
 ## Recipe Explorer Form
-![Recipe Form](./images/Recipe Form.png?)
+![Home Page](./images/Homepage.png?)
 
 ## Recipe Explorer
 ![Home Page](./images/Recipe Display.png?)
