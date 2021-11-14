@@ -63,7 +63,7 @@ function MealForm() {
             ? <RecipeDisplay data={formData}/>
             : 
             <div className="wrapper">
-                <h1 className="title">Meal Preferences</h1>
+                <h1 className="title">Recipe Preferences</h1>
                 {submitting &&
                     <div>
                         You are submitting the following:
@@ -108,7 +108,7 @@ function MealForm() {
                                 <label>
                                     <input type="checkbox" id="chinese" value="chinese"/>Chinese</label>
                                 <label>
-                                    <input type="checkbox" id="eastern-european" value="eastern-european"/>Eastern European</label>
+                                    <input type="checkbox" id="eastern european" value="eastern european"/>Eastern European</label>
                                 <label>
                                     <input type="checkbox" id="european" value="european"/>European</label>
                                 <label>
@@ -130,13 +130,13 @@ function MealForm() {
                                 <label>
                                     <input type="checkbox" id="korean" value="korean"/>Korean</label>
                                 <label>
-                                    <input type="checkbox" id="latin-american" value="latin-american"/>Latin American</label>
+                                    <input type="checkbox" id="latin american" value="latin american"/>Latin American</label>
                                 <label>
                                     <input type="checkbox" id="mediterranean" value="mediterranean"/>Mediterranean</label>
                                 <label>
                                     <input type="checkbox" id="mexican" value="mexican"/>Mexican</label>
                                 <label>
-                                    <input type="checkbox" id="middle-eastern" value="middle-eastern"/>Middle Eastern</label>
+                                    <input type="checkbox" id="middle eastern" value="middle eastern"/>Middle Eastern</label>
                                 <label>
                                     <input type="checkbox" id="nordic" value="nordic"/>Nordic</label>
                                 <label>
@@ -176,7 +176,7 @@ function MealForm() {
                                 <label>
                                     <input type="checkbox" id="sulfite" value="sulfite"/>Sulfite</label>
                                 <label>
-                                    <input type="checkbox" id="tree-nut" value="tree-nut"/>Tree Nut</label>
+                                    <input type="checkbox" id="tree nut" value="tree nut"/>Tree Nut</label>
                                 <label>
                                     <input type="checkbox" id="wheat" value="wheat"/>Wheat</label>
                             </div> 
