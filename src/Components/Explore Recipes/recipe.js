@@ -16,7 +16,7 @@ function Recipe(props) {
     useEffect(() => {
         async function getRecipes() {
             const response = await axios.get('https://api.spoonacular.com/recipes/' + recipe.id + '/information?apiKey=' + api_key);
-
+            
             const tempData = {
                 servings : response.data.servings,
                 readyTime : response.data.readyInMinutes,

@@ -50,7 +50,7 @@ function RecipeDisplay(props) {
                                             '&intolerances=' + restrictions + '&maxReadyTime=' + maxPrepTime +
                                             '&minProtein=' + minProtein + '&maxProtein=' + maxProtein +
                                             '&minCalories=' + minCalories + '&maxCalories=' + maxCalories +
-                                            '&number=100');
+                                            '&number=20');
             
             setRecipes(response.data.results);
         }
