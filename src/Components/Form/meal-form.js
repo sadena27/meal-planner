@@ -56,31 +56,6 @@ function MealForm() {
         }
     }
 
-    var expanded = false;
-
-    const showCheckboxes1 = () => {
-        var checkboxes = document.getElementById("checkboxes1");
-        if (!expanded) {
-          checkboxes.style.display = "block";
-          expanded = true;
-        } else {
-          checkboxes.style.display = "none";
-          expanded = false;
-        }
-      }
-
-    var expanded = false;
-
-    const showCheckboxes2 = () => {
-        var checkboxes = document.getElementById("checkboxes2");
-        if (!expanded) {
-            checkboxes.style.display = "block";
-            expanded = true;
-        } else {
-            checkboxes.style.display = "none";
-            expanded = false;
-        }
-    }
 
     return (
         <div>
@@ -101,7 +76,7 @@ function MealForm() {
                 }
                 <form className="form" onSubmit={handleSubmit}>
                     <fieldset>
-                        <h3 className="title">Dietary Preferences</h3>
+                        <h3>Dietary Preferences</h3>
                         <label>
                             <p className="title">Diet</p>
                             <select className="selectBox" name="diet" onChange={onChangeDiet}>
@@ -176,7 +151,7 @@ function MealForm() {
                         </div>
                     </fieldset>
                     <fieldset>
-                        <h3 className="title">Restrictions</h3>
+                        <h3>Restrictions</h3>
                         <div className="multiselect">
                             <p className="title">Intolerances</p>
                             <div id="checkboxes2" name="restrictions" onChange={onChangeRestrictions}>
@@ -208,12 +183,12 @@ function MealForm() {
                         </div>
                         <label>
                             <p className="title">Maximum Preparation Time (in minutes)</p>
-                            <input type="number" name="max-time" onChange={onChangeTime} step="1"/>
+                            <input className="inputBox" type="number" name="max-time" onChange={onChangeTime} step="1"/>
                         </label> 
                         <p></p>             
                     </fieldset>
                     <fieldset>
-                        <h3 className="title">Nutrition</h3>
+                        <h3>Nutrition</h3>
                         <label>
                             <p className="title">Protein Level</p>
                             <select className="selectBox" name="protein" onChange={onChangeProtein}>
