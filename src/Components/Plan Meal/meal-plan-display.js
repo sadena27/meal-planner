@@ -18,21 +18,16 @@ function MealPlanDisplay(props) {
 
    useEffect(() => {
        async function getRecipes() {
-         console.log("WOOOOOO")
          let mealType = "breakfast";
          const response1 = await axios.get('https://api.spoonacular.com/recipes/complexSearch?apiKey=' + 
                                           api_key + '&diet=' + diet + '&type=' + mealType + '&intolerances=' + 
                                           restrictions + '&maxReadyTime=' + maxPrepTime + '&number=7');
-         console.log(response1.data.results)
          setBreakfastRecipes(response1.data.results);
          mealType = "main course"
          const response2 = await axios.get('https://api.spoonacular.com/recipes/complexSearch?apiKey=' + 
                                           api_key + '&diet=' + diet + '&type=' + mealType + '&intolerances=' + 
                                           restrictions + '&maxReadyTime=' + maxPrepTime + '&number=14');
-         console.log(response2.data.results)
          setMainCourseRecipes(response2.data.results);
-         console.log(breakfastRecipes);
-         console.log(mainCourseRecipes);
        }
        getRecipes();
     }, [api_key])
