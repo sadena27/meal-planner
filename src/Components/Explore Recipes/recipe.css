@@ -78,14 +78,3 @@ a{
     clear: both;
     align-items: center;
 }
-
-/* .overlay {
-    position: absolute;
-    background-color: blue;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    filter: blur(2px);  
-} */
