@@ -7,12 +7,12 @@ function Navbar() {
         <header className="navbar">
             <Link to="/">
                 <div className="brand">
-                    <div className="title">Meal Planner</div>
+                    <div className="title">Recipe Finder</div>
                 </div>
             </Link>
             <nav>
-                <Link to="/explore-recipes">Explore Recipes</Link>
-                <Link to="/plan-meals">Plan Meals</Link>
+                <Link to="/explore-recipes">Recipe Generator</Link>
+                <Link to="/plan-meals">Meal Planner</Link>
             </nav>
         </header>
     )

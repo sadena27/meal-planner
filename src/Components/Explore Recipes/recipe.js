@@ -51,10 +51,9 @@ function Recipe(props) {
                             <p>
                                 <b>Servings:</b> {recipeInfo.servings} <br />
                                 <b>Preparation Time:</b> {recipeInfo.readyTime} <br />
-                                <b><a href={recipeInfo.link}>Source/Instructions</a></b>
+                                <b><a target="_blank" href={recipeInfo.link}>Source/Instructions</a></b>
                             </p>
                         </div>
-
                         <div class = "column right">
                             <h3>Ingredients: </h3>
                             <ul>{recipeInfo.ingredients}</ul>

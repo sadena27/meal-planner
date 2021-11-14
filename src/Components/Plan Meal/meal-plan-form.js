@@ -5,17 +5,10 @@ import "./meal-plan-form.css"
 
 function MealPlanForm() {
    const [formData, setFormData] = useState({diet: '', restrictions: [], maxPrepTime: 0});
-   const [submitting, setSubmitting] = useState(false);
    const [submitted, setSubmitted] = useState(false);
 
    const handleSubmit = event => {
        event.preventDefault();
-       setSubmitting(true);
-       console.log(formData);
-
-       setTimeout(() => {
-           setSubmitting(false);
-       }, 3000);
 
        setSubmitted(true);
    }
@@ -44,17 +37,7 @@ function MealPlanForm() {
       ? <MealPlanDisplay data={formData}/>
       : 
       <div className="wrapper">
-          <h1 className="title">Meal Preferences</h1>
-          {submitting &&
-              <div>
-                  You are submitting the following:
-                  <ul>
-                      {Object.entries(formData).map(([name, value]) => (
-                          <li key={name}><strong>{name}</strong>: {value.toString()}</li>
-                      ))}
-                  </ul>
-              </div>
-          }
+          <h1 className="meal-title">Meal Preferences</h1>
           <form className="meal-form" onSubmit={handleSubmit}>
               <fieldset>
                   <label>

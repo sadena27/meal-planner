@@ -27,6 +27,10 @@
    font-family: Raleway;
 }
 
+.meal-title {
+   margin-bottom: -20px;
+}
+
 .inputBox {
    border-color: #ffffff;
    border-radius: 5px;

@@ -56,8 +56,9 @@
     align-items: center;
 }
 
-.title{
+.homepage-title {
     font-size: 25px;
+    color: black;
 }
 
 /* .overlay {

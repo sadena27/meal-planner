@@ -4,17 +4,11 @@ import "./recipe-form.css"
 
 function RecipeForm() {
     const [formData, setFormData] = useState({diet: '', cuisinePreferences: [], restrictions: [], maxPrepTime: 0, proteinLevel: '', calorieLevel: ''});
-    const [submitting, setSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
 
     const handleSubmit = event => {
         event.preventDefault();
-        setSubmitting(true);
         console.log(formData);
-
-        setTimeout(() => {
-            setSubmitting(false);
-        }, 3000);
 
         setSubmitted(true);
     }
@@ -61,17 +55,7 @@ function RecipeForm() {
             ? <RecipeDisplay data={formData}/>
             : 
             <div className="wrapper">
-                <h1 className="title">Meal Preferences</h1>
-                {submitting &&
-                    <div>
-                        You are submitting the following:
-                        <ul>
-                            {Object.entries(formData).map(([name, value]) => (
-                                <li key={name}><strong>{name}</strong>: {value.toString()}</li>
-                            ))}
-                        </ul>
-                    </div>
-                }
+                <h1 className="recipe-title">Meal Preferences</h1>
                 <form className="form" onSubmit={handleSubmit}>
                     <fieldset>
                         <h3>Dietary Preferences</h3>

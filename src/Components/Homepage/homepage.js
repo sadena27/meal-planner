@@ -8,11 +8,11 @@ import Recipe from "./recipe.jpg"
 function Homepage() {
     return (
         <div>
-            <div className="center"><h1>Meal Planner</h1></div>
+            <div className="center"><h1>Recipe Finder</h1></div>
             <div className= "column right">
                 <b><Link to="/explore-recipes">
                     <div className="brand">
-                        <div className="title">Recipe Generator</div>
+                        <div className="homepage-title">Recipe Generator</div>
                     </div>
                 </Link></b>
                 <img className="picrecipes" src={Recipe}/>
@@ -24,7 +24,7 @@ function Homepage() {
                 <div className = "column left">
                     <b><Link to="/">
                         <div className="brand">
-                            <div className="title">Meal Planner</div>
+                            <div className="homepage-title">Meal Planner</div>
                         </div>
                     </Link></b>
                     <img className="picmealplan" src={MealPlan}/>
