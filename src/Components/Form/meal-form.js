@@ -3,7 +3,7 @@ import RecipeDisplay from '../Generator/recipe-display';
 import "./meal-form.css"
 
 function MealForm() {
-    const [formData, setFormData] = useState({diet: '', cuisinePreferences: [], restrictions: [], maxPrepTime: 0, proteinLevel: '', calorieLevel: ''});
+    const [formData, setFormData] = useState({diet: '', cuisinePreferences: ["italian", "indian"], restrictions: [], maxPrepTime: 0, proteinLevel: '', calorieLevel: ''});
     const [submitting, setSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
 
@@ -17,7 +17,6 @@ function MealForm() {
         }, 3000);
 
         setSubmitted(true);
-        console.log("set to true");
     }
 
     const onChangeDiet = (e) => {
@@ -55,7 +54,6 @@ function MealForm() {
             setFormData(prevState => ({...prevState, restrictions: [...prevState.restrictions, e.target.value]}));
         }
     }
-
 
     return (
         <div>
