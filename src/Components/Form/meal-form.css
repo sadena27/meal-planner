@@ -45,6 +45,9 @@ fieldset {
  
  .selectBox {
    position: relative;
+   border-color: #ffff;
+   border-radius: 5px;
+   color: #808080;
 }
  
  .selectBox select {
@@ -68,10 +71,3 @@ fieldset {
    overflow: scroll;
  }
  
- #checkboxes label {
-   display: block;
- }
- 
- #checkboxes label:hover {
-   background-color: rgba(114,132,168, 1);
- }

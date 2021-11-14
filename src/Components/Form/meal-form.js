@@ -11,12 +11,13 @@ const formReducer = (state, event) => {
 
 
 function MealForm() {
-    const [formData, setFormData] = useReducer(formReducer, {});
+    const [formData, setFormData] = useState({diet: '', cuisinePreferences: [], restrictions: [], maxPrepTime: 0, proteinLevel: '', calorieLevel: ''});
     const [submitting, setSubmitting] = useState(false);
 
     const handleSubmit = event => {
         event.preventDefault();
         setSubmitting(true);
+        console.log(formData);
 
         setTimeout(() => {
             setSubmitting(false);
@@ -24,10 +25,47 @@ function MealForm() {
     }
 
     const handleChange = event => {
+        console.log(event.target.name);
         setFormData({
             name: event.target.name,
             value: event.target.value,
         });
+    }
+
+    const onChangeDiet = (e) => {
+        setFormData(prevState => ({...prevState, diet: e.target.value}))
+    }
+
+    const onChangeTime = (e) => {
+        setFormData(prevState => ({...prevState, maxPrepTime: e.target.value}));
+    }
+
+    const onChangeProtein = (e) => {
+        setFormData(prevState => ({...prevState, proteinLevel: e.target.value}));
+    }
+
+    const onChangeCalories = (e) => {
+        setFormData(prevState => ({...prevState, calorieLevel: e.target.value}));
+    }
+
+    const onChangeCuisine = (e) => {
+        let index = formData.cuisinePreferences.indexOf(e.target.value);
+
+        if (index > -1) {
+            setFormData(prevState => ({...prevState, cuisinePreferences: prevState.cuisinePreferences.filter(preference => preference !== e.target.value)}));
+        } else {
+            setFormData(prevState => ({...prevState, cuisinePreferences: [...prevState.cuisinePreferences, e.target.value]}));
+        }
+    }
+
+    const onChangeRestrictions = (e) => {
+        let index = formData.restrictions.indexOf(e.target.value);
+
+        if (index > -1) {
+            setFormData(prevState => ({...prevState, restrictions: prevState.restrictions.filter(restriction => restriction !== e.target.value)}));
+        } else {
+            setFormData(prevState => ({...prevState, restrictions: [...prevState.restrictions, e.target.value]}));
+        }
     }
 
     var expanded = false;
@@ -74,8 +112,8 @@ function MealForm() {
                     <h3 className="title">Dietary Preferences</h3>
                     <label>
                         <p className="title">Diet</p>
-                        <select name="diet" onChange={handleChange}>
-                            <option value="">--Please choose an option--</option>
+                        <select className="selectBox" name="diet" onChange={onChangeDiet}>
+                            <option value="">Please choose an option...</option>
                             <option value="any">Any Diet</option>
                             <option value="gluten-free">Gluten Free</option>
                             <option value="ketogenic">Ketogenic</option>
@@ -87,61 +125,61 @@ function MealForm() {
                     </label>
                     <div className="multiselect">
                         <p className="title">Cuisine Preferences</p>
-                        <div id="checkboxes1">
+                        <div id="checkboxes1" name="preferences" onChange={onChangeCuisine}>
                             <label>
-                                <input type="checkbox" id="all" />All</label>
+                                <input type="checkbox" id="all" value="all"/>All</label>
                             <label>
-                                <input type="checkbox" id="african" />African</label>
+                                <input type="checkbox" id="african" value="african"/>African</label>
                             <label>
-                                <input type="checkbox" id="american" />American</label>
+                                <input type="checkbox" id="american" value="american"/>American</label>
                             <label>
-                                <input type="checkbox" id="british" />British</label>
+                                <input type="checkbox" id="british" value="british"/>British</label>
                             <label>
-                                <input type="checkbox" id="cajun" />Cajun</label>
+                                <input type="checkbox" id="cajun" value="cajun"/>Cajun</label>
                             <label>
-                                <input type="checkbox" id="caribbean" />Caribbean</label>
+                                <input type="checkbox" id="caribbean" value="caribbean"/>Caribbean</label>
                             <label>
-                                <input type="checkbox" id="chinese" />Chinese</label>
+                                <input type="checkbox" id="chinese" value="chinese"/>Chinese</label>
                             <label>
-                                <input type="checkbox" id="eastern-european" />Eastern European</label>
+                                <input type="checkbox" id="eastern-european" value="eastern-european"/>Eastern European</label>
                             <label>
-                                <input type="checkbox" id="european" />European</label>
+                                <input type="checkbox" id="european" value="european"/>European</label>
                             <label>
-                                <input type="checkbox" id="french" />French</label>
+                                <input type="checkbox" id="french" value="french"/>French</label>
                             <label>
-                                <input type="checkbox" id="german" />German</label>
+                                <input type="checkbox" id="german" value="german"/>German</label>
                             <label>
-                                <input type="checkbox" id="greek" />Greek</label>
+                                <input type="checkbox" id="greek" value="greek"/>Greek</label>
                             <label>
-                                <input type="checkbox" id="indian" />Indian</label>
+                                <input type="checkbox" id="indian" value="indian"/>Indian</label>
                             <label>
-                                <input type="checkbox" id="irish" />Irish</label>
+                                <input type="checkbox" id="irish" value="irish"/>Irish</label>
                             <label>
-                                <input type="checkbox" id="italian" />Italian</label>
+                                <input type="checkbox" id="italian" value="italian"/>Italian</label>
                             <label>
-                                <input type="checkbox" id="japanese" />Japanese</label>
+                                <input type="checkbox" id="japanese" value="japanese"/>Japanese</label>
                             <label>
-                                <input type="checkbox" id="jewish" />Jewish</label>
+                                <input type="checkbox" id="jewish" value="jewish"/>Jewish</label>
                             <label>
-                                <input type="checkbox" id="korean" />Korean</label>
+                                <input type="checkbox" id="korean" value="korean"/>Korean</label>
                             <label>
-                                <input type="checkbox" id="latin-american" />Latin American</label>
+                                <input type="checkbox" id="latin-american" value="latin-american"/>Latin American</label>
                             <label>
-                                <input type="checkbox" id="mediterranean" />Mediterranean</label>
+                                <input type="checkbox" id="mediterranean" value="mediterranean"/>Mediterranean</label>
                             <label>
-                                <input type="checkbox" id="mexican" />Mexican</label>
+                                <input type="checkbox" id="mexican" value="mexican"/>Mexican</label>
                             <label>
-                                <input type="checkbox" id="middle-eastern" />Middle Eastern</label>
+                                <input type="checkbox" id="middle-eastern" value="middle-eastern"/>Middle Eastern</label>
                             <label>
-                                <input type="checkbox" id="nordic" />Nordic</label>
+                                <input type="checkbox" id="nordic" value="nordic"/>Nordic</label>
                             <label>
-                                <input type="checkbox" id="southern" />Southern</label>
+                                <input type="checkbox" id="southern" value="southern"/>Southern</label>
                             <label>
-                                <input type="checkbox" id="spanish" />Spanish</label>
+                                <input type="checkbox" id="spanish" value="spanish"/>Spanish</label>
                             <label>
-                                <input type="checkbox" id="thai" />Thai</label>
+                                <input type="checkbox" id="thai" value="thai"/>Thai</label>
                             <label>
-                                <input type="checkbox" id="vietnamese" />Vietnamese</label>
+                                <input type="checkbox" id="vietnamese" value="vietnamese"/>Vietnamese</label>
                         </div>
                     </div>
                 </fieldset>
@@ -149,41 +187,36 @@ function MealForm() {
                     <h3 className="title">Restrictions</h3>
                     <div className="multiselect">
                         <p className="title">Intolerances</p>
-                        {/* <div className="selectBox" onClick={showCheckboxes2}>
-                            <select>
-                                <option>--Please choose an option--</option>
-                            </select>
-                        </div> */}
-                        <div id="checkboxes2">
+                        <div id="checkboxes2" name="restrictions" onChange={onChangeRestrictions}>
                             <label>
-                                <input type="checkbox" id="dairy" />Dairy</label>
+                                <input type="checkbox" id="dairy" value="dairy"/>Dairy</label>
                             <label>
-                                <input type="checkbox" id="egg" />Egg</label>
+                                <input type="checkbox" id="egg" value="egg"/>Egg</label>
                             <label>
-                                <input type="checkbox" id="gluten" />Gluten</label>
+                                <input type="checkbox" id="gluten" value="gluten"/>Gluten</label>
                             <label>
-                                <input type="checkbox" id="grain" />Grain</label>
+                                <input type="checkbox" id="grain" value="grain"/>Grain</label>
                             <label>
-                                <input type="checkbox" id="peanut" />Peanut</label>
+                                <input type="checkbox" id="peanut" value="peanut"/>Peanut</label>
                             <label>
-                                <input type="checkbox" id="seafood" />Seafood</label>
+                                <input type="checkbox" id="seafood" value="seafood"/>Seafood</label>
                             <label>
-                                <input type="checkbox" id="sesame" />Sesame</label>
+                                <input type="checkbox" id="sesame" value="sesame"/>Sesame</label>
                             <label>
-                                <input type="checkbox" id="shellfish" />Shellfish</label>
+                                <input type="checkbox" id="shellfish" value="shellfish"/>Shellfish</label>
                             <label>
-                                <input type="checkbox" id="soy" />Soy</label>
+                                <input type="checkbox" id="soy" value="soy"/>Soy</label>
                             <label>
-                                <input type="checkbox" id="sulfite" />Sulfite</label>
+                                <input type="checkbox" id="sulfite" value="sulfite"/>Sulfite</label>
                             <label>
-                                <input type="checkbox" id="tree-nut" />Tree Nut</label>
+                                <input type="checkbox" id="tree-nut" value="tree-nut"/>Tree Nut</label>
                             <label>
-                                <input type="checkbox" id="wheat" />Wheat</label>
+                                <input type="checkbox" id="wheat" value="wheat"/>Wheat</label>
                         </div> 
                     </div>
                     <label>
-                        <p className="title">Maximum Preparation Time</p>
-                        <input type="number" name="max-time" onChange={handleChange} step="1"/>
+                        <p className="title">Maximum Preparation Time (in minutes)</p>
+                        <input type="number" name="max-time" onChange={onChangeTime} step="1"/>
                     </label> 
                     <p></p>             
                 </fieldset>
@@ -191,8 +224,8 @@ function MealForm() {
                     <h3 className="title">Nutrition</h3>
                     <label>
                         <p className="title">Protein Level</p>
-                        <select name="protein" onChange={handleChange}>
-                            <option value="">--Please choose an option--</option>
+                        <select className="selectBox" name="protein" onChange={onChangeProtein}>
+                            <option value="">Please choose an option...</option>
                             <option value="low">Low</option>
                             <option value="medium">Medium</option>
                             <option value="high">High</option>
@@ -200,8 +233,8 @@ function MealForm() {
                     </label>  
                     <label>
                         <p className="title">Calorie Level</p>
-                        <select name="calorie" onChange={handleChange}>
-                            <option value="">--Please choose an option--</option>
+                        <select className="selectBox" name="calorie" onChange={onChangeCalories}>
+                            <option value="">Please choose an option...</option>
                             <option value="low">Low</option>
                             <option value="medium">Medium</option>
                             <option value="high">High</option>
