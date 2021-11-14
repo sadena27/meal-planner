@@ -11,7 +11,7 @@ function Navbar() {
                 </div>
             </Link>
             <nav>
-                <Link to="/meal-plan-generator">Plan Generator</Link>
+                <Link to="/explore-recipes">Explore Recipies</Link>
             </nav>
         </header>
     )
