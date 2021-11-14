@@ -1,0 +1,72 @@
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    padding: 40px 50px;
+    background-color: rgba(114, 132, 168, 1);
+    box-shadow: 3px 8px 13px 2px rgba(27, 27, 58, 0.6);
+    border-radius: 25px;
+    width: 800px;
+    height: 500px;
+    color: white;
+    font-family: Raleway;
+}
+
+.center {
+    text-align: center;
+}
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+.picmealplan {
+    width: 368px;
+    height: 368px;
+}
+
+.picrecipes {
+    width: 368px;
+    height: 368px;
+}
+
+
+.column {
+    float: left;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.left {
+    width: 50%;
+}
+
+.right {
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    align-items: center;
+}
+
+.title{
+    font-size: 25px;
+}
+
+/* .overlay {
+    position: absolute;
+    background-color: blue;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    filter: blur(2px);  
+} */
