@@ -11,7 +11,8 @@ function Navbar() {
                 </div>
             </Link>
             <nav>
-                <Link to="/explore-recipes">Explore Recipies</Link>
+                <Link to="/explore-recipes">Explore Recipes</Link>
+                <Link to="/plan-meals">Plan Meals</Link>
             </nav>
         </header>
     )
