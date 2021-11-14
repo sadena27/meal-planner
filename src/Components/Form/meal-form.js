@@ -3,7 +3,7 @@ import RecipeDisplay from '../Generator/recipe-display';
 import "./meal-form.css"
 
 function MealForm() {
-    const [formData, setFormData] = useState({diet: '', cuisinePreferences: [], restrictions: [], maxPrepTime: 0, proteinLevel: '', calorieLevel: ''});
+    const [formData, setFormData] = useState({diet: '', cuisinePreferences: ["italian", "indian"], restrictions: [], maxPrepTime: 0, proteinLevel: '', calorieLevel: ''});
     const [submitting, setSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
 
@@ -17,7 +17,6 @@ function MealForm() {
         }, 3000);
 
         setSubmitted(true);
-        console.log("set to true");
     }
 
     const onChangeDiet = (e) => {
@@ -53,32 +52,6 @@ function MealForm() {
             setFormData(prevState => ({...prevState, restrictions: prevState.restrictions.filter(restriction => restriction !== e.target.value)}));
         } else {
             setFormData(prevState => ({...prevState, restrictions: [...prevState.restrictions, e.target.value]}));
-        }
-    }
-
-    var expanded = false;
-
-    const showCheckboxes1 = () => {
-        var checkboxes = document.getElementById("checkboxes1");
-        if (!expanded) {
-          checkboxes.style.display = "block";
-          expanded = true;
-        } else {
-          checkboxes.style.display = "none";
-          expanded = false;
-        }
-      }
-
-    var expanded = false;
-
-    const showCheckboxes2 = () => {
-        var checkboxes = document.getElementById("checkboxes2");
-        if (!expanded) {
-            checkboxes.style.display = "block";
-            expanded = true;
-        } else {
-            checkboxes.style.display = "none";
-            expanded = false;
         }
     }
 
