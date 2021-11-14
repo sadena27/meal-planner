@@ -1,3 +1,4 @@
 # Recipe Planner
 
-![Homepage](./images/Homepage.png?raw=true "Title")
+## Home Page
+![Home Page](./images/Homepage.png?raw=true "Title")
