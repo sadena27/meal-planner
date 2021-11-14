@@ -7,20 +7,19 @@ function Recipe(props) {
     const recipe = props.recipe;
     const [open, setOpen] = useState(false);
     const closeModal = () => setOpen(false);
-    const [recipeInfo, setRecipeInfo] = useState({});
-
+    const [recipeInfo, setRecipeInfo] = useState({calories: 8});
 
     const api_key = process.env.REACT_APP_API_KEY;
     require('dotenv').config();
 
-    useEffect(() => {
-        async function getRecipes() {
-            // const response = await axios.get('https://api.spoonacular.com/recipes/' + recipe.id + '/information?apiKey=' + api_key);
-            // console.log(response.data);
-            // setRecipeInfo(response.data.results);
-        }
-        getRecipes();
-     }, [api_key])
+    // useEffect(() => {
+    //     async function getRecipes() {
+    //         const response = await axios.get('https://api.spoonacular.com/recipes/' + recipe.id + '/information?apiKey=' + api_key);
+    //         console.log(response.data);
+    //         setRecipeInfo(response.data.results);
+    //     }
+    //     getRecipes();
+    //  }, [api_key])
 
     return (
         <div className="recipe">
@@ -34,6 +33,7 @@ function Recipe(props) {
                     <a className="close" onClick={closeModal}>&times;</a>
                     <h1>{recipe.title}</h1>
                     <img className="recipe-pic-popup" src={recipe.image} alt={recipe.title}/>
+                    <p>{recipeInfo.calories}</p>
                 </div>
             </Popup>
         </div>
