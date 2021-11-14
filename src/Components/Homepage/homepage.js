@@ -22,7 +22,7 @@ function Homepage() {
             </div>
             <div className = "row">
                 <div className = "column left">
-                    <b><Link to="/">
+                    <b><Link to="/plan-meals">
                         <div className="brand">
                             <div className="homepage-title">Meal Planner</div>
                         </div>

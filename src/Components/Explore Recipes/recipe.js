@@ -5,7 +5,6 @@ import './recipe.css';
 
 function Recipe(props) {
     const recipe = props.recipe;
-    console.log(recipe);
     const [open, setOpen] = useState(false);
     const closeModal = () => setOpen(false);
     const [recipeInfo, setRecipeInfo] = useState({servings: 0, readyTime: 0, link: '', ingredients: ''});
