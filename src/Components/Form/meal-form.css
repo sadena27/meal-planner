@@ -7,12 +7,29 @@
 
 .button {
    background-color: rgba(114,132,168, .5);
-   border-radius: 25px;
+   border-radius: 10px;
    border-width: .5px;
+   border: none;
+   box-shadow: 3px 1px 13px 2px rgba(27, 27, 58, 0.6);
+   padding: 10px;
+   transition: all .2s ease-in-out;
+   font-family: Raleway;
+   font-weight: bold;
 }
+
+.button:hover {
+   cursor: pointer;
+   transform: scale(1.1);
+}
+
 
 .title {
    font-family: Raleway;
+}
+
+.inputBox {
+   border-color: #ffffff;
+   border-radius: 5px;
 }
 
 label {
@@ -22,6 +39,7 @@ label {
 option {
    font-family: Raleway;
 }
+
 
 fieldset {
    display: flex;
@@ -47,12 +65,12 @@ fieldset {
    position: relative;
    border-color: #ffff;
    border-radius: 5px;
-   color: #808080;
 }
  
  .selectBox select {
    width: 100%;
  }
+
 
  #checkboxes1 {
     display: flex;
@@ -60,6 +78,7 @@ fieldset {
     border: 1px #dadada solid;
     height: 150px;
     overflow: scroll;
+    border-radius: 20px;
  }
  
  
@@ -69,5 +88,6 @@ fieldset {
    border: 1px #dadada solid;
    height: 150px;
    overflow: scroll;
+   border-radius: 20px;
  }
  
