@@ -4,13 +4,13 @@
 ![Home Page](./images/Homepage.png?)
 
 ## Recipe Explorer Form
-![Home Page](./images/Homepage.png?)
+![Recipe Explorer](./images/Recipe-Form.png?)
 
 ## Recipe Explorer
-![Home Page](./images/Recipe Display.png?)
+![Home Page](./images/Recipe-Display.png?)
 
 ## Meal Plan for the Week
-![Home Page](./images/Meal Plannner.png?)
+![Home Page](./images/Meal-Plannner.png?)
 
 ## Recipe Pop Up
-![Recipe Pop Up](./images/Recipe Pop Up.png?)
+![Recipe Pop Up](./images/Recipe-Pop-Up.png?)
