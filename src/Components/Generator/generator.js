@@ -26,7 +26,7 @@ function Generator() {
             {recipes.length === 1 
              ?  <div className="loading">
                     <p>Loading recipes</p>
-                    <Loader type="Oval" color="#3f8efc" height={120} width={120}/>
+                    {/* <Loader type="Oval" color="#3f8efc" height={120} width={120}/> */}
                 </div>
              :  <div className="recipes-box">
                     {recipes.map(recipe => (
