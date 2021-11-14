@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Navbar from './Components/Navbar/navbar';
 import Homepage from './Components/Homepage/homepage';
 import Generator from './Components/Generator/generator';
+import Recipes from './Components/Generator/recipe-display';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Homepage}/>
           <Route exact path="/meal-plan-generator" component={Generator}/>
+          <Route exact path="/recipes" component={Recipes}/>
         </Switch>
       </BrowserRouter>
   </div>
