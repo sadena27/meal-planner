@@ -1,0 +1,51 @@
+.loading {
+   font-size: 30px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 20vh;
+}
+
+.recipes-tile {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   width: 334px;
+   height: 150px;
+   vertical-align: top;
+}
+
+.week {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   vertical-align: top;
+}
+
+.day-title {
+   font-weight: bold;
+}
+
+
+.day {
+   display: flex;
+   flex-direction: column;
+   color: #ffffff;
+   background-color: rgba(114,132,168, .5);
+   margin: 10px;
+   width: 1002px;
+   height: 430px;
+   border-radius: 15px;
+}
+
+.meals {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.meal h3 {
+   margin-bottom: -10px;
+}

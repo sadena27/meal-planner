@@ -45,11 +45,6 @@ function RecipeDisplay(props) {
 
     useEffect(() => {
         async function getRecipes() {
-            // console.log('https://api.spoonacular.com/recipes/complexSearch?apiKey=' + 
-            // api_key + '&diet=' + diet + '&cuisine=' + cuisinePreferences +
-            // '&intolerances=' + restrictions + '&maxReadyTime=' + maxPrepTime +
-            // '&minProtein=' + minProtein + '&maxProtein=' + maxProtein +
-            // '&minCalories=' + minCalories + '&maxCalories=' + maxCalories)
             const response = await axios.get('https://api.spoonacular.com/recipes/complexSearch?apiKey=' + 
                                             api_key + '&diet=' + diet + '&cuisine=' + cuisinePreferences +
                                             '&intolerances=' + restrictions + '&maxReadyTime=' + maxPrepTime +
